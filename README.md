@@ -16,7 +16,7 @@
             font-family: Arial, sans-serif;
             color: #e0e0e0;
             background: linear-gradient(135deg, #000000, #434343);
-            overflow: hidden;
+            overflow-x: hidden; /* Ensure horizontal overflow is hidden, but allow vertical scrolling */
             position: relative;
         }
 
@@ -41,6 +41,42 @@
         section {
             padding: 40px 20px;
             text-align: center;
+        }
+
+        #hero {
+            background: url('https://source.unsplash.com/1600x900/?technology,team') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            margin-bottom: 20px;
+        }
+
+        #hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        #cta-button {
+            background-color: #1e90ff;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        #cta-button:hover {
+            background-color: #4682b4;
         }
 
         #services, #testimonials, #contact {
@@ -135,43 +171,6 @@
                 font-size: 1em;
             }
         }
-
-        /* Hero Section */
-        #hero {
-            background: url('https://source.unsplash.com/1600x900/?technology,team') no-repeat center center/cover;
-            color: #fff;
-            text-align: center;
-            padding: 100px 20px;
-            margin-bottom: 20px;
-        }
-
-        #hero h2 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        #hero p {
-            font-size: 1.5em;
-            margin-top: 10px;
-        }
-
-        #cta-button {
-            background-color: #1e90ff;
-            color: #fff;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 5px;
-            text-transform: uppercase;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        #cta-button:hover {
-            background-color: #4682b4;
-        }
     </style>
 </head>
 <body>
@@ -216,28 +215,4 @@
         <h2>Contact Us</h2>
         <p>Email: <a href="mailto:itsdgen@gmail.com">itsdgen@gmail.com</a></p>
         <p>Mobile (Sri Lanka): +94740234993</p>
-        <p>Mobile (UK): +447930159970</p>
-        <p>Mobile (Canada): +16478564530</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 D-Gen. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // JavaScript for 3D moving objects
-        document.addEventListener('mousemove', (e) => {
-            const movingObject = document.createElement('div');
-            movingObject.classList.add('moving-object');
-            movingObject.style.left = `${e.pageX}px`;
-            movingObject.style.top = `${e.pageY}px`;
-            document.body.appendChild(movingObject);
-            
-            // Remove the object after animation
-            setTimeout(() => {
-                movingObject.remove();
-            }, 2000); // Adjust time if needed
-        });
-    </script>
-</body>
-</html>
+        <p>Mobile (UK): +44793015997
